@@ -129,6 +129,5 @@ dmypy.json
 .pyre/
 
 # IntellijIdea files
-*.iml
 .idea
 out
