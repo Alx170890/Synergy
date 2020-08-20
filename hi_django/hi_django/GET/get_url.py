@@ -1,6 +1,7 @@
 from django.http import HttpRequest, HttpResponse
-from django.template import loader
+from .form import ShortUrlForm
+from django import shortcuts
 
 def index(request: HttpRequest):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render({}))
+    context = {'short_url_form': ShortUrlForm()}
+    return shortcuts.render(request, 'index.html', context)
