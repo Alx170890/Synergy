@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from hi_django.templates.r import urlsR
+from .r import urlsR
 from .GET import urlsG
 
 urlpatterns = [
