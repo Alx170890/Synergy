@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .RDR import urlsR
+from .r import urlsR
 from .GET import urlsG
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('RDR/', include(urlsR.urlpatterns)),
+    path('r/', include(urlsR.urlpatterns)),
     path('GET/', include(urlsG.urlpatterns)),
 ]

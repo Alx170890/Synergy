@@ -22,7 +22,7 @@ h1, h2 {
     font-weight: 300;
 }
 
-form {
+form, .short_url {
     height: 50px;
     display: flex;
     align-items: center;
@@ -75,7 +75,16 @@ button:active {
     box-shadow: none;
 }
 
-a {
+a {   
     font-size: 20px;
     color: #fff;  
+    border: 3px solid rgb(247, 203, 6);
+    border-radius: 10px;
+    height: 100%;
+    padding: 0 20px;
+    margin-right: 10px;
+}
+
+.short_url {
+    justify-content: flex-start;
 }
