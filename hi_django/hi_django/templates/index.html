@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!--{% load static %}-->
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-<!--    <link rel="stylesheet" href="{% static 'main.css' %}">-->
-    <link rel="stylesheet" href="/static/main.css" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+<!--    <link rel="stylesheet" href="/static/main.css" />-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">     
     <title>Shorter URL</title>
 </head>
@@ -15,7 +15,6 @@
         <form action="/r/" method="POST">
             {% csrf_token %}
             {{ short_url_form }}
-<!--            <input type=""text name=""url placeholder="Длинный URL">-->
             <button class="get_url" type="submit">Укоротить</button>
         </form>
     </div>    
