@@ -1,5 +1,5 @@
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
-from hi_django.GET.form import ShortUrlForm
+from hi_django.form import ShortUrlForm
 from django import shortcuts
 from .storage import short_storage
 import random

@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .r import urlsR
-from .GET import urlsG
+# from .GET import urlsG
+from .get_url import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('r/', include(urlsR.urlpatterns)),
-    path('GET/', include(urlsG.urlpatterns)),
+    # path('GET/', include(urlsG.urlpatterns)),
+    path('', index),
 ]
