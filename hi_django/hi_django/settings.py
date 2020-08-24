@@ -25,7 +25,9 @@ SECRET_KEY = 'i)&ec87!dec##g5h#3=27)ziosi(gmzwb3@+9ntd!f)b89(v)e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['178.62.255.24','shorterurl.ru']
+
 
 # EVENT_STARTED=True
 
@@ -121,5 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATIC_ROOT = '/home/Synergy/hi_django/hi_django/static/'
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 
