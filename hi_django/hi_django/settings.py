@@ -26,7 +26,7 @@ SECRET_KEY = 'i)&ec87!dec##g5h#3=27)ziosi(gmzwb3@+9ntd!f)b89(v)e'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['178.62.255.24','shorterurl.ru']
+ALLOWED_HOSTS = ['178.62.255.24','shorterurl.ru', '127.0.0.1']
 
 
 # EVENT_STARTED=True
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hi_django',#Нужно добавить, чтобы не было конфликтов
+    'shortcuts.apps.ShortcutsConfig'
 ]
 
 MIDDLEWARE = [
