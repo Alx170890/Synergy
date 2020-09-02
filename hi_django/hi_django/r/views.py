@@ -5,6 +5,8 @@ from .storage import short_storage
 import random
 import string
 
+from shortcuts.models import *
+
 def short_url(request: HttpRequest):
     rend = str(''.join(random.choice(string.ascii_letters) for x in range(7)))
     if request.method != "POST":
@@ -21,9 +23,11 @@ def short_url(request: HttpRequest):
     port = request.get_port()
     port = '' if port not in {80, 443} else f':{port}'
     cont = {'short_url': f'{scheme}://{host}{port}/r/{short_rend_key}'}
+    ShortUrl(url=url, short=cont.get('short_url'), key=short_key).save()
+
     return shortcuts.render(request, 'url.html', cont)
 
 def long_url(request: HttpRequest, short_key):
     short_keys = short_key[:-7]
-    url = short_storage.url(short_keys)
+    url = short_storage.url(short_keys, short_key)
     return HttpResponseRedirect(url)

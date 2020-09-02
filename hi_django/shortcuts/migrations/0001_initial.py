@@ -17,6 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('key', models.CharField(max_length=256)),
                 ('url', models.URLField()),
+                ('short', models.URLField()),
                 ('visits', models.IntegerField(default=0)),
             ],
         ),
