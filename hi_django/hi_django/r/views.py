@@ -24,7 +24,6 @@ def short_url(request: HttpRequest):
     port = '' if port not in {80, 443} else f':{port}'
     cont = {'short_url': f'{scheme}://{host}{port}/r/{short_rend_key}'}
     ShortUrl(url=url, short=cont.get('short_url'), key=short_key).save()
-
     return shortcuts.render(request, 'url.html', cont)
 
 def long_url(request: HttpRequest, short_key):

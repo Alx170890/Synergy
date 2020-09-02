@@ -21,7 +21,6 @@ class ShortUrlStorage(object):
 
     def next(self):
         num = ShortUrl.objects.count() + 1
-        # num = len(self._short_urls) + 1
         return f'{num:x}'
 
 short_storage = ShortUrlStorage()
