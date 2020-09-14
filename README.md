@@ -1,2 +1,2 @@
 # Synergy
-shorterurl.ru
+http://shorterurl.ru
