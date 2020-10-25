@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="wrapper">
+        {% include 'users.html' %}
         <h1>Ваш укороченный url!</h1>
         <div class="short_url">
             <a class="a" href="{{short_url}}">{{short_url}}</a>
             <button class="copy_url">Копировать</button>
         </div>
+        {% include 'info.html' %}
     </div>    
     <script type="text/javascript" src="{% static 'main.js' %}"></script>
 </body>

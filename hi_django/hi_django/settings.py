@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hi_django',#Нужно добавить, чтобы не было конфликтов
-    'shortcuts.apps.ShortcutsConfig'
+    'shortcuts.apps.ShortcutsConfig',
+    'user.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [

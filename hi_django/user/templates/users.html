@@ -1,0 +1,10 @@
+{% if request.user.is_authenticated %}
+<p> Hello {{request.user}} </p>
+{% else %}
+<form action="{% url 'u:auth' %}?redirect={{request.path}}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" maxlength="256" required placeholder="Name">
+    <input type="password" name="password" required id="id_password" placeholder="Password">
+    <button class="copy_url">Login</button>
+</form>
+{% endif %}

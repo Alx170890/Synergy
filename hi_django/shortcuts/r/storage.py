@@ -13,6 +13,7 @@ class ShortUrlStorage(object):
     def url(self, short_key, x):
         u = self._short_urls.get(short_key, None)
         shortcut = ShortUrl.objects.get(key=short_key)
+        print(shortcut)
         shortcut.visits += 1
         shortcut.save()
         if u is None:

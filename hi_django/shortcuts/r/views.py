@@ -1,9 +1,10 @@
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
-from hi_django.form import ShortUrlForm
+from shortcuts.r.form import ShortUrlForm
 from django import shortcuts
 from .storage import short_storage
 import random
 import string
+import logging
 
 from shortcuts.models import *
 
@@ -29,4 +30,5 @@ def short_url(request: HttpRequest):
 def long_url(request: HttpRequest, short_key):
     short_keys = short_key[:-7]
     url = short_storage.url(short_keys, short_key)
+    logging.info("Create shorturl %r for user %r", short_url, request.user)
     return HttpResponseRedirect(url)
