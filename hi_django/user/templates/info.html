@@ -1,0 +1,8 @@
+{% if request.user.is_authenticated %}
+    <h2> Ваши URL </h2>
+<!--    {% for Shorturl in urls %}-->
+    <p> URL {{shorturl.short}} </p>
+    <p> Short-URL {{shorturl.url}} </p>
+    <p> Посещений {{shorturl.visits}} </p>
+<!--    {% endfor %}-->
+{% endif %}

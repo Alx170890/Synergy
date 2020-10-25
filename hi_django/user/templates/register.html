@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Register</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Посльзователь не был найден! Можете зарегистрироваться</h1>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" maxlength="256" required placeholder="Name">
+<!--            <input type="text" name="usersurname" maxlength="256" required placeholder="Surname">-->
+            <input type="password" name="password" required id="id_password" placeholder="Password">
+            <button class="copy_url">Register</button>
+        </form>
+    </div>
+</body>
+</html>

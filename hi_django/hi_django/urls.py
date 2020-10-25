@@ -15,13 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .r import urlsR
+from shortcuts.r import urlsR
 # from .GET import urlsG
-from .get_url import index
+# from shortcuts.r.get_url import index
+from shortcuts.urls import urlpatterns as shortcut_urls
+from user.urls import urlpatterns as user_url
+import logging
+
+logging.root.setLevel(logging.INFO)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('r/', include(urlsR.urlpatterns)),
     # path('GET/', include(urlsG.urlpatterns)),
-    path('', index),
+    # path('', index),
+    path('', include(shortcut_urls)),
+    path('user/', include((user_url, 'user'), namespace='u'))
 ]

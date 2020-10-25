@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
+        {% include 'users.html' %}
         <h1>Больше не значит лучше!</h1>
         <h2>Укороти свой URL</h2>
         <form action="/r/" method="POST">
@@ -16,6 +17,7 @@
             {{ short_url_form }}
             <button class="get_url" type="submit">Укоротить</button>
         </form>
+        {% include 'info.html' %}
     </div>    
 </body>
 </html>
